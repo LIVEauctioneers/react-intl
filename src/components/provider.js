@@ -13,7 +13,7 @@ import IntlPluralFormat from '../plural';
 import memoizeIntlConstructor from 'intl-format-cache';
 import invariant from 'invariant';
 import {shouldIntlComponentUpdate, filterProps, shallowEquals} from '../utils';
-import {intlConfigPropTypes, intlFormatPropTypes, intlShape} from '../types';
+import {intlConfigPropTypes, intlFormatPropTypes} from '../types';
 import * as format from '../format';
 import {hasLocaleData} from '../locale-data-registry';
 
