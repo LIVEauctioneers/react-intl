@@ -145,7 +145,8 @@
     "test:perf": "cross-env NODE_ENV=production babel-node test/perf",
     "examples:install": "babel-node scripts/examples npm install",
     "examples:link": "npm link && babel-node scripts/examples npm link react-intl",
+    "preversion": "npm run clean && npm run build",
     "preversion2": "npm run clean && npm run build && npm run test:all",
-    "prepublish2": "npm run clean && npm run build"
+    "prepublish": "npm run clean && npm run build"
   }
 }
