@@ -1,5 +1,5 @@
 import React from 'react';
-import {Consumer as IntlConsumer} from './provider.js';
+import { IntlConsumer } from './consumer';
 
 export default function withIntlContext(Component) {
   return function (props) {

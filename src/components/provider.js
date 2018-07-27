@@ -7,6 +7,7 @@
 import React, {Component, Children} from 'react';
 import PropTypes from 'prop-types';
 import withIntlContext from './withIntlContext';
+import { IntlContext } from './context';
 import IntlMessageFormat from 'intl-messageformat';
 import IntlRelativeFormat from 'intl-relativeformat';
 import IntlPluralFormat from '../plural';
@@ -30,9 +31,6 @@ const defaultProps = {
   defaultLocale: 'en',
   defaultFormats: {},
 };
-
-const IntlContext = React.createContext();
-export const Consumer = IntlContext.Consumer
 
 function getConfig(filteredProps) {
   let config = filteredProps;
