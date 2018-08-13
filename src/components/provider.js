@@ -183,4 +183,5 @@ class IntlProvider extends Component {
   }
 }
 
-export default withIntlContext(IntlProvider) // to be able to inherit values from parent providers
+export default IntlProvider
+// export default withIntlContext(IntlProvider) // to be able to inherit values from parent providers
