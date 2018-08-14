@@ -2,7 +2,7 @@ import React from 'react';
 import { IntlConsumer } from './consumer';
 
 export default function withIntlContext(Component) {
-  return function (props) {
+  function WithIntlContext(props) {
     return (
       <IntlConsumer>
         {(intl) => (
@@ -14,4 +14,7 @@ export default function withIntlContext(Component) {
       </IntlConsumer>
     )
   }
+  
+  WithIntlContext.displayName = `withIntlContext(${Component.displayName || Component.name})`;
+  return WithIntlContext;
 }

@@ -6,7 +6,7 @@
 
 import React, {Component, Children} from 'react';
 import PropTypes from 'prop-types';
-import withIntlContext from './withIntlContext';
+// import withIntlContext from './withIntlContext';
 import { IntlContext } from './context';
 import IntlMessageFormat from 'intl-messageformat';
 import IntlRelativeFormat from 'intl-relativeformat';
