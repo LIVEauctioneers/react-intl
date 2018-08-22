@@ -8,6 +8,7 @@ import memory from 'rollup-plugin-memory';
 import uglify from 'rollup-plugin-uglify';
 
 const DEFAULT_LOCALE = 'en';
+const LOCALES_TO_KEEP = ['de', 'en', 'es', 'fr', 'it', 'ja', 'ko', 'nl', 'pl', 'ru', 'zh' ];
 
 const cldrData = extractCLDRData({
   pluralRules: true,
@@ -15,7 +16,9 @@ const cldrData = extractCLDRData({
 });
 
 const cldrDataByLocale = new Map(
-  Object.keys(cldrData).map(locale => [locale, cldrData[locale]])
+  Object.keys(cldrData)
+    .filter(x => LOCALES_TO_KEEP.includes(x))
+    .map(locale => [locale, cldrData[locale]])
 );
 
 const cldrDataByLang = [...cldrDataByLocale].reduce((map, [locale, data]) => {
